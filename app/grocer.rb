@@ -4,7 +4,7 @@ class Grocer
     attr_accessor :redis, :shopping_list, :shopper_name
 
     def initialize()
-        @redis = Redis.new
+        @redis = Redis.new(host: ENV['REDIS_HOST'], port: ENV['REDIS_PORT'], db: 0)
     end
 
     def deliver(shopping_list,complexity=1,size=1)
