@@ -4,6 +4,7 @@ require 'json'
 require_relative 'shopper'
 require_relative 'grocer'
 
+set :bind, '0.0.0.0'
 
 get '/' do
     erb :index

@@ -10,4 +10,4 @@ RUN bundle install
 
 COPY . .
 
-CMD ["./server.rb"]
+CMD ["jruby", "server.rb"]
